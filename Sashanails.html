@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="sashaneils.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    </head>
+
+
+
+
+<body>
+<header class="top-header">
+    <div class="left-block">
+        <h2 class="logo"><span>Sasha</span> Nails Studio</h2>
+        <ul>
+        <li>+34634252585 </li>
+        <li>adress; Carrer de Seneca 2 </li>
+        <li> gmail:korieshkova2003@gmail.com</li> 
+        </ul>
+    </div>
+        <div class="right-block">
+        <p> Take appointment </p>
+        <button class="glass-btn" onclick="openForm('classic manicure')">Take Appointment</button>
+        </div>
+    </header>
+
+    <h1>Manicure services</h1>
+
+    <div class="services">
+
+    <div class="service-class">
+    <img src="images/2025-11-09 20.42.05.jpg" alt="classic cut">
+    <h3> classic manicure</h3>
+    <p>cleaning nails, cutting cuticles, shaping nails, applying moisturizing oil for better cuticle growth.</p>
+    <button class="book-btn" onclick="openForm('classic manicure')">40min-20€
+    </button>   
+    </div>
+
+    <div class="service-class">
+    <img src="images/2025-11-09 20.40.12.jpg" alt="classic top">
+    <h3> coated manicure</h3>
+    <p>cleaning nails, cutting cuticles, shaping nails, applying gel polish with a design, applying moisturizing oil for better cuticle growth.</p>
+    <button class="book-btn" onclick="openForm('coated manicure')">1:30h-30€</button>  
+    </div>
+
+    <div class="service-class">
+        <img src="images/2025-11-09 20.41.07.jpg" alt="extension">
+        <h3>nail extensions top</h3>
+        <p>nail extensions,nail cleaning, cuticle trimming, nail shaping, cuticle oil treatment for healthy growth.</p>
+        <button class="book-btn" onclick="openForm('nail extensions top')">2h-40€</button>  
+    </div>
+
+    <div class="service-class">  
+        <img src="images/2025-11-09 20.39.52.jpg" alt="manicure">
+        <h3> nail extensions with design</h3>
+        <p>nail extensions coated in pastel colors with a design. Cuticle trimming and nail treatment .</p>
+        <button class="book-btn" onclick="openForm('nail extensions with design')">3h-45€</button>  
+    </div>
+
+    <div class="service-class">
+        <img src="images/2025-11-09 20.42.34.jpg" alt="manicure">
+        <h3>nail extension with design</h3>
+        <p>nail cleaning, nail shape and surface treatment , cuticle trimming . Coating with glitter design</p>
+        <button class="book-btn" onclick="openForm('nail extensions with design')">1:30h-32€</button>
+    </div>
+
+    <div class="service-class">
+        <img src="images/2025-11-09 20.40.19.jpg" alt="manicure">
+        <h3>buble design</h3>
+        <p>nail cleaning, nail shape and surface treatment , cuticle trimming . Nail extensions with bubble design</p>
+        <button class="book-btn" onclick="openForm('buble design')">3h-48€</button>
+    </div>
+
+</div>
+<footer> 
+    <div class="socials">
+        <a href="https://www.instagram.com/olek_sandra3333?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <img src="images/instagram-vector-logo-icon-social-media-logotype_901408-392.avif" alt="inst-logo">
+    </a>
+    <a href="https:wa.me/34647666450" target="_blank">
+        <img src="images/f71ffb7ad7db43ccc7b1466de418f254.jpg" alt="whatsapp">
+</a>
+    </div> 
+    <!-- Всплывающее окно с формой -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h2>Appointment</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" name="name" required>
+  
+        <label>Age:</label>
+        <input type="number" name="age" required>
+  
+        <label>Email:</label>
+        <input type="email" name="email" required>
+  
+        <label>Service:</label>
+        <select id="service" name="service">
+          <option value="Classic manicure">Classic manicure</option>
+          <option value="Coated manicure">Coated manicure</option>
+          <option value="Nail extensions top">Nail extensions top</option>
+          <option value="Nail extensions with design">Nail extensions with design</option>
+          <option value="Bubble design">Bubble design</option>
+        </select>
+  
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  function openForm(serviceName) {
+    document.getElementById('popup').style.display = 'block'; // показать форму
+    document.getElementById('service').value = serviceName; // выбрать услугу
+  }
+  
+  function closeForm() {
+    document.getElementById('popup').style.display = 'none'; // скрыть форму
+  }
+  </script>
+  
+</body>
+</html>
